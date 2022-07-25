@@ -1,4 +1,4 @@
-package org.github.leetbook.day29;
+package org.github.leetbook.simulation;
 
 import java.util.Arrays;
 
@@ -7,15 +7,15 @@ import java.util.Arrays;
  * @Date 2022/7/21 22:59
  * https://leetcode.cn/leetbook/read/illustration-of-algorithm/5vfh9g/
  */
-public class Solution {
+public class spiralOrderSolution {
     public static void main(String[] args) {
         int[][] int3multi3 = new int[3][3];
         int3multi3[0] = new int[]{1, 2, 3};
         int3multi3[1] = new int[]{4, 5, 6};
         int3multi3[2] = new int[]{7, 8, 9};
 
-        Solution solution = new Solution();
-        int[] ints = solution.spiralOrder(int3multi3);
+        spiralOrderSolution spiralOrderSolution = new spiralOrderSolution();
+        int[] ints = spiralOrderSolution.spiralOrder(int3multi3);
         System.out.println(Arrays.toString(ints));
 
 
@@ -23,7 +23,7 @@ public class Solution {
         int3multi4[0] = new int[]{1, 2, 3, 4};
         int3multi4[1] = new int[]{5, 6, 7, 8};
         int3multi4[2] = new int[]{9, 10, 11, 12};
-        int[] ints1 = solution.spiralOrder(int3multi4);
+        int[] ints1 = spiralOrderSolution.spiralOrder(int3multi4);
         System.out.println(Arrays.toString(ints1));
     }
 
@@ -79,41 +79,5 @@ public class Solution {
         return res;
 
     }
-
-    // 自己写的，写的和屎一样！还跑不起来！ 思路没打开！
-    /*public int[] spiralOrder(int[][] matrix) {
-        int yLen = matrix.length;
-        int xLen = matrix[0].length;
-        boolean xIsPositive = true;
-        boolean yIsPositive = true;
-
-        int currentX = 0;
-        int currentY = 0;
-        int nextX = xLen - 1;
-        int nextY = yLen - 1;
-        int backupX = 0;
-        int backupY = 0;
-
-        while (xLen > 0 || yLen > 0) {
-            if (xIsPositive) {
-                while (currentX < nextX) {
-                    currentX++;
-                }
-                nextX --;
-                xIsPositive = false;
-            } else {
-                while (currentX > )
-
-            }
-            xLen--;
-            xIsPositive = !xIsPositive;
-            while (yLen > 0) {
-
-            }
-            yLen--;
-        }
-
-    }*/
-
 
 }
